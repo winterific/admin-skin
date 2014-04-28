@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="admin">
+<head>
+    <title>Entity Index</title>
+
+</head>
+<body>
+    <div class='wrap'>
+        <div ng-controller="EntityIndex">
+            {% raw %}
+            <h2>{{ entityName }}</h2>
+
+            <div class='entity-list'>
+                <table>
+                    <thead>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Slug</th>
+                        <th>Date</th>
+                        <th>Image</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="e in entities">
+                            <td>{{ e.id }}</td>
+                            <td>{{ e.name }}</td>
+                            <td>
+                                <a ng-href="/{{ t.slug }}">{{ t.name }}</a>
+                            </td>
+                            <td>{{ e.date }}</td>
+                            <td>
+                                <img ng-src="{{ e.image }}">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            {% endraw %}
+        </div>
+    </div>
+    <script src="/library/javascript/angular.min.js"></script>
+    <script src="/library/javascript/app.js"></script>
+    <script src="/library/javascript/entityController.js"></script>
+</body>
+</html>

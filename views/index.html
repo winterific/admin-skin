@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="admin">
+<head>
+    <title>Admin Index</title>
+
+</head>
+<body>
+    <div class='wrap'>
+        <div ng-controller="MainIndex">
+            {% raw %}
+            <div class='type-list'>
+                <table>
+                    <thead>
+                        <th>Entity Name</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="t in entityTypes">
+                            <td>
+                                <a ng-href="/{{ t.slug }}">{{ t.name }}</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            {% endraw %}
+        </div>
+    </div>
+    <script src="/library/javascript/angular.min.js"></script>
+    <script src="/library/javascript/app.js"></script>
+    <script src="/library/javascript/entityController.js"></script>
+</body>
+</html>

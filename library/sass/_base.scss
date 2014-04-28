@@ -1,0 +1,22 @@
+@import "susy";
+@import "breakpoint";
+
+$base-font: 16px;
+
+$column-width: 960px / 12;
+
+$susy: (
+    columns: 12,
+    column-width: $column-width,
+    gutters: 1/4,
+    math: magic,
+);
+
+$white: #fff;
+$black: #000;
+$gray: #444;
+
+$textColor: $gray;
+$backgroundColor: $white;
+
+
